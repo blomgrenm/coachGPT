@@ -1,2 +1,6 @@
 venv/
+<<<<<<< HEAD
 .env
+=======
+.vscode/
+>>>>>>> 8b12b97b06f6506a93fd6f69ef3d25b9029aa6a8

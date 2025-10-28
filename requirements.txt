@@ -1,0 +1,6 @@
+openai
+gspread
+oauth2client
+requests
+pandas
+python-dateutil
