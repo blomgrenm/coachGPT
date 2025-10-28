@@ -4,3 +4,5 @@ oauth2client
 requests
 pandas
 python-dateutil
+dotenv
+stravalib
