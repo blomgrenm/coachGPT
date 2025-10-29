@@ -3,11 +3,16 @@ import webbrowser
 import requests
 from stravalib.client import Client
 from dotenv import load_dotenv
+from stravaAuth import get_access_token
+
+load_dotenv()
+
 
 client = Client()
-client.access_token = "your_access_token"
+client.refresh_token = os.getenv("STRAVA_REFRESH_TOKEN")
+client.access_token = get_access_token()
 
-# Get recent activities
-activities = client.get_activities(limit=10)
-for activity in activities:
-    print(activity.name, activity.distance, activity.start_date)
+# Example: get last 5 activities
+activities = client.get_activities(limit=5)
+for act in activities:
+    print(act.name, act.moving_time)
